@@ -1,0 +1,18 @@
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: httpd
+  description: Apache HTTPD in UBI9 Minimal
+  annotations:
+    backstage.io/techdocs-ref: dir:.
+    github.com/project-slug: radiorabe/container-image-httpd
+  links:
+    - url: https://httpd.apache.org/docs/
+      title: https://httpd.apache.org/docs/
+spec:
+  type: container
+  lifecycle: experimental
+  owner: it-reaktion
+  dependsOn:
+    - component:default/rabe-ubi9-minimal
