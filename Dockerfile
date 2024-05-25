@@ -23,6 +23,7 @@ RUN    mkdir -p /mnt/rootfs \
          httpd-core \
          mod_ldap \
          mod_security \
+         mod_security_crs \
          mod_session \
          mod_ssl \
          sscg \
