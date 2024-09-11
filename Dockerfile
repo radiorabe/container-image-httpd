@@ -22,6 +22,7 @@ RUN    mkdir -p /mnt/rootfs \
          hostname \
          httpd-core \
          mod_ldap \
+         mod_auth_openidc \
          mod_security \
          mod_security_crs \
          mod_session \
