@@ -72,6 +72,10 @@ COPY --from=upstream /usr/libexec/httpd-prepare /usr/libexec/httpd-prepare
 RUN    useradd -u 1001 -r -g 0 -d ${HOME} -c "Default Application User" default \
     && chown -R 1001:0 /etc/httpd/conf/ \
     && /usr/libexec/httpd-prepare
+RUN mkdir /etc/httpd/conf.d/local_configs \
+    && chown -R 1001:0 /etc/httpd/conf.d/local_configs
+RUN echo "IncludeOptional conf.d/local_configs/*.conf" \
+    >> ${HTTPD_MAIN_CONF_PATH}/httpd.conf
 
 WORKDIR /opt/app-root/src
 
