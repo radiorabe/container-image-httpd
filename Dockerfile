@@ -21,8 +21,9 @@ RUN    mkdir -p /mnt/rootfs \
          glibc-minimal-langpack \
          hostname \
          httpd-core \
-         mod_ldap \
          mod_auth_openidc \
+         mod_ldap \
+         mod_md \
          mod_security \
          mod_security_crs \
          mod_session \
