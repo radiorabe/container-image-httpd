@@ -79,6 +79,8 @@ RUN    useradd -u 1001 -r -g 0 -d ${HOME} -c "Default Application User" default 
     && echo "IncludeOptional conf.d/local_configs/*.conf" \
     >> ${HTTPD_MAIN_CONF_PATH}/httpd.conf
 
+VOLUME /etc/httpd/state
+
 WORKDIR /opt/app-root/src
 
 USER 1001
