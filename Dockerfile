@@ -33,7 +33,6 @@ RUN    mkdir -p /mnt/rootfs \
     && cp \
        /etc/pki/ca-trust/source/anchors/rabe-ca.crt \
        /mnt/rootfs/etc/pki/ca-trust/source/anchors/ \
-    && update-ca-trust \
     && chmod a-s \
        /mnt/rootfs/usr/bin/* \
        /mnt/rootfs/usr/sbin/* \
@@ -73,6 +72,7 @@ COPY --from=upstream /usr/libexec/httpd-prepare /usr/libexec/httpd-prepare
 
 RUN    useradd -u 1001 -r -g 0 -d ${HOME} -c "Default Application User" default \
     && chown -R 1001:0 /etc/httpd/conf/ \
+    && update-ca-trust \
     && /usr/libexec/httpd-prepare \
     && mkdir /etc/httpd/conf.d/local_configs \
     && chown -R 1001:0 /etc/httpd/conf.d/local_configs \
