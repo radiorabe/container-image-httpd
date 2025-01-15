@@ -1,4 +1,4 @@
-FROM quay.io/fedora/httpd-24:20250113 AS upstream
+FROM quay.io/fedora/httpd-24:20250115 AS upstream
 FROM ghcr.io/radiorabe/ubi9-minimal:0.8.0 AS build
 
 ENV APP_ROOT=/opt/app-root
