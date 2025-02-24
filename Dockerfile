@@ -76,6 +76,8 @@ RUN    useradd -u 1001 -r -g 0 -d ${HOME} -c "Default Application User" default 
     && /usr/libexec/httpd-prepare \
     && mkdir /etc/httpd/conf.d/local_configs \
     && chown -R 1001:0 /etc/httpd/conf.d/local_configs \
+    && echo "ServerTokens ProductOnly" \
+    >> ${HTTPD_MAIN_CONF_PATH}/httpd.conf \
     && echo "IncludeOptional conf.d/local_configs/*.conf" \
     >> ${HTTPD_MAIN_CONF_PATH}/httpd.conf
 
