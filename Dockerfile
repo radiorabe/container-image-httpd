@@ -42,7 +42,7 @@ RUN    mkdir -p /mnt/rootfs \
        /mnt/rootfs/var/log/dnf* \
        /mnt/rootfs/var/log/yum.*
 
-FROM scratch as app
+FROM scratch AS app
 
 ENV PLATFORM=el9 \
     SUMMARY="Apache HTTPD Image for RaBe" \
