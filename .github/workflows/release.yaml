@@ -15,8 +15,7 @@ jobs:
       image: ghcr.io/radiorabe/httpd
       name: nginx
       display-name: RaBe Apache HTTPD in UBI9
-      tags: minimal rhel9 ubi9 rabe apach ehttpd
-      cosign-base-image-only: true
+      tags: minimal rhel9 ubi9 rabe apache httpd
   mkdocs:
     runs-on: ubuntu-latest
     permissions:
