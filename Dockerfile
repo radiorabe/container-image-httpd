@@ -23,7 +23,6 @@ RUN    mkdir -p /mnt/rootfs \
          httpd-core \
          mod_auth_openidc \
          mod_ldap \
-         mod_md \
          mod_security \
          mod_security_crs \
          mod_session \
@@ -71,7 +70,7 @@ COPY --from=upstream /usr/bin/run-httpd /usr/bin/run-httpd
 COPY --from=upstream /usr/libexec/httpd-prepare /usr/libexec/httpd-prepare
 
 RUN    useradd -u 1001 -r -g 0 -d ${HOME} -c "Default Application User" default \
-    && chown -R 1001:0 /etc/httpd/conf/ \
+    && chown -R 1001:0 /etc/httpd/conf/ /var/lib/httpd \
     && update-ca-trust \
     && /usr/libexec/httpd-prepare \
     && mkdir /etc/httpd/conf.d/local_configs \
