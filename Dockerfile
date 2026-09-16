@@ -1,4 +1,4 @@
-FROM quay.io/fedora/httpd-24:20260909@sha256:1ae6681782b8407d11900be0276a9887ccdfb9feee7e22e7c478a2f428c85a26 AS upstream
+FROM quay.io/fedora/httpd-24:20260916@sha256:1787bee8e457b389181717ed2042670eabadf71cf343759b8a92275d714c9bd0 AS upstream
 FROM ghcr.io/radiorabe/ubi9-minimal:0.12.0@sha256:ddf3ac33c48b5005cc325732cb547279a926f29b3db9adcbd844f1cf94dcf831 AS build
 
 ENV APP_ROOT=/opt/app-root
