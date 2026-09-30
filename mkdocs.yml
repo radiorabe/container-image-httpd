@@ -1,6 +1,6 @@
-site_name: RaBe Apache HTTPD Container Image
-repo_url: https://github.com/radiorabe/container-image-httpd
-repo_name: radiorabe/container-image-httpd
+site_name: RaBe NetBox Container Image
+repo_url: https://github.com/radiorabe/container-image-netbox
+repo_name: radiorabe/container-image-netbox
 
 theme:
   name: "material"

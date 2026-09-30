@@ -2,17 +2,15 @@
 apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
-  name: httpd
-  description: Apache HTTPD in UBI9 Minimal
+  name: netbox
+  description: NetBox with plugins
   annotations:
     backstage.io/techdocs-ref: dir:.
-    github.com/project-slug: radiorabe/container-image-httpd
+    github.com/project-slug: radiorabe/container-image-netbox
   links:
-    - url: https://httpd.apache.org/docs/
-      title: https://httpd.apache.org/docs/
+    - url: https://github.com/netbox-community/netbox-docker/
+      title: https://github.com/netbox-community/netbox-docker/
 spec:
   type: container
   lifecycle: experimental
   owner: it-reaktion
-  dependsOn:
-    - component:default/rabe-ubi9-minimal
