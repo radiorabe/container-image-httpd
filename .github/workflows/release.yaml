@@ -12,11 +12,11 @@ jobs:
   release-container:
     uses: radiorabe/actions/.github/workflows/release-container.yaml@c26933dd78f0f76b51d1e3bb80ac099bfe0ee89b # v0.45.0
     with:
-      image: ghcr.io/radiorabe/netbox
-      name: netbox
-      display-name: RaBe NetBox
-      tags: ubuntu rabe netbox
-      cosign-image-skip-regexp: quay.io/netboxcommunity/netbox
+      image: ghcr.io/radiorabe/httpd
+      name: nginx
+      display-name: RaBe Apache HTTPD in UBI9
+      tags: minimal rhel9 ubi9 rabe apache httpd
+      cosign-image-skip-regexp: quay.io/fedora/httpd-24
   release-mkdocs:
     permissions:
       contents: write # Required to push the gh-pages branch for documentation deployment

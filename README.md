@@ -1,17 +1,20 @@
-# RaBe NetBox Image
+# RaBe http Image
 
-> [!WARNING] The image and plugin versions used here are very outdated and should not be considered being put into production.
+[Apache HTTP Server](https://httpd.apache.org) container image based on [RaBe UBI9 Minimal](https://github.com/radiorabe/container-image-ubi9-minimal).
 
-[NetBox Community](https://github.com/netbox-community/netbox) container image and plugins added.
-
-The image contains the following plugins:
-
-- [Netbox Topology Views Plugin](https://github.com/netbox-community/netbox-topology-views)
-- ...
+It uses some scripts from and is loosely based on the micro flavour of [sclorg/httpd-container](https://github.com/sclorg/httpd-container), the main difference being the upstream image used during the build and the selection of installed modules.
 
 ## Usage
 
-Follow the official netbox community documentation [here](https://github.com/netbox-community/netbox-docker/wiki).
+If you want to host a static website, the following example could get you started.
+
+```dockerfile
+FROM ghcr.io/radiorabe/httpd:latest
+
+COPY src/ /var/www/html
+```
+
+The server listens on ports 8080 and 8443 for both http and https.
 
 ## Release Management
 
