@@ -1,4 +1,4 @@
-FROM quay.io/netboxcommunity/netbox:v3.1.7@sha256:a65b7570fc8367a9f2cfc3bda8278b0fa0f26ee15b4192e0511390e4eb2b6210
+FROM quay.io/netboxcommunity/netbox:v4.7.2@sha256:ad038bdb0e3498e5bf81c2c8becf396d62cbdc118d0b491b4d58014968033066
 
 COPY ./plugin_requirements.txt /opt/netbox/
 
